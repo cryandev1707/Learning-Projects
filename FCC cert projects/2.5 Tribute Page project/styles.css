@@ -1,0 +1,82 @@
+#main {
+    background-color: rgb(224, 224, 224);
+    min-width: 100px;
+    min-height: 100px;
+    text-align: center;
+    margin: 25px 5px;
+    padding: 20px 10px;
+    border-radius: 5px;
+}
+
+/* Font Family */
+#title, #title-caption, #img-caption, #tribute-info {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Title Container */
+#title {
+    margin: 0;
+    font-size: 40px;
+}
+
+#title-caption {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+/* Image Container */
+#img-div {
+    background-color: white;
+    margin: 0;
+    padding: 10px;
+}
+
+#image {
+    max-width: 100%;  /* Required */
+    height: auto;  /* Required */
+    display: block;
+}
+
+#img-caption {
+    margin: 10px auto;
+}
+
+/* Tribute Info*/
+#tribute-info {
+    display: block;
+}
+
+#tribute-info-title, #tribute-info > ul, blockquote {
+    max-width: 700px; /* This is the thing tha determines whether or not the text moves when the window is resized. */
+}
+
+#tribute-info-title {
+    display: block;
+    margin: 40px auto 40px auto;
+}
+
+.event-date {
+    font-weight: 700;
+}
+
+.event-date::after {
+    content: " - ";
+}
+
+#tribute-info > ul {
+    margin: 15px auto;
+}
+
+#tribute-info > ul > li {
+    text-align: left;
+    margin: 15px auto;
+    letter-spacing: 1px;
+}
+
+blockquote {
+    margin: 40px auto;
+}
+
+blockquote > p {
+    text-align: left;
+    font-style: italic;
+}

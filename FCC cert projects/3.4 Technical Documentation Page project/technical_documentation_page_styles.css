@@ -1,0 +1,144 @@
+/* @media (min-width:320px)  { smartphones, iPhone, portrait 480x320 phones } */
+/* @media (min-width:481px)  { portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. } */
+/* @media (min-width:641px)  { portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones } */
+/* @media (min-width:961px)  { tablet, landscape iPad, lo-res laptops ands desktops } */
+/* @media (min-width:1025px) { big landscape tablets, laptops, and desktops } */
+/* @media (min-width:1281px) { hi-res laptops and desktops } */
+
+/*
+In practice, many designers convert pixels to ems, largely because ems afford better zooming. At standard zoom 1em === 16px, multiply pixels by 1em/16px to get ems. For example, 320px === 20em.
+*/
+
+/* mobile devices */
+@media screen and (min-width: 320px) and (max-width: 799px){
+    body{
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+    }
+
+    #navbar{
+        width: 100%;
+        height: 55vh;
+    }
+
+    #navbar ul{
+        border-top: 3px solid rgb(160, 160, 160);
+        border-bottom: 3px solid rgb(160, 160, 160);
+    }
+
+    #main-doc{
+        width: 100%;
+        height: 45vh;
+        box-sizing: border-box;
+    }
+}
+
+/* laptops and desktops */
+@media screen and (min-width: 800px){
+    body{
+        display: flex;
+        flex-direction: row;
+        overflow-y: hidden;
+    }
+
+    #navbar{
+        min-width: 20em;
+        height: 100vh;
+        border-right: 3px solid rgb(160, 160, 160);
+    }
+
+    #main-doc{
+        width: 75%;
+        height: 100vh;
+        overflow-y: scroll;
+    }
+}
+
+body{
+    margin: 0;
+}
+
+/* header styling */
+#navbar h1, #main-doc h2{
+    font-size: 22pt;
+    font-weight: 500;
+    font-family: sans-serif;
+    color: black;
+}
+
+/* font-family and color styling */
+.nav-link, #main-doc p, #main-doc li, #main-doc code{
+    font-family: sans-serif;
+    color: rgb(65, 65, 65);
+}
+
+/* Navbar styling */
+#navbar{
+    display: flex;
+    flex-direction: column;
+}
+
+#nav-header{
+    font-size: 20pt;
+    text-align: center;
+    margin: 20px auto;
+}
+
+#navbar > ul{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+#navbar > ul > li{
+    list-style: none;
+    border-top: 1px solid;
+    margin: 1px;
+}
+
+.nav-link{
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 15px 30px;
+}
+
+/* main section */
+#main-doc{
+    padding-left: 30px;
+    padding-right: 30px;
+    overflow-wrap: break-word;
+}
+
+/* code segments */
+#main-doc code{
+    display: block;
+    background-color: rgb(240, 240, 240);
+}
+
+/* paragraphs */
+#main-doc p, #main-doc li, #main-doc code{
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+
+/* #main-doc font styling */
+#main-doc p{
+    font-size: 11pt;
+    margin-left: 15px;
+}
+
+#main-doc code, #main-doc li{
+    font-size: 11pt;
+    margin-left: 25px;
+}
+
+#main-doc code{
+    padding: 15px;
+}
+
+.main-section:last-of-type{
+    margin-bottom: 30px;
+}
